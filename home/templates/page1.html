@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{% url "list" %}" class="btn btn-lg btn-danger">List BOOKS</a>
+<form action="" method="POST" enctype="multipart/form-data" class="container mt-5 shadow-lg rounded d-flex flex-column bg-dark text-light justify-content-evenly ">
+    {% csrf_token %}
+
+   <div class="justify-content-evenly p-5 w-75">
+    {{form.as_p}}
+   </div>
+    <input type="submit" name="submit" class="btn btn-sm btn-success m-3">
+</form>
+
+
+{% endblock content %}
